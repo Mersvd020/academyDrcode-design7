@@ -14,7 +14,8 @@ const Router = () => {
   const allRoutes = getRoutes(layout);
 
   const routes = useRoutes([...allRoutes]);
-
+  
+  
   return routes;
 };
 

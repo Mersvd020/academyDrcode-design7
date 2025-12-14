@@ -1,8 +1,6 @@
-// ** React Imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// ** Reactstrap Imports
 import {
   Card,
   CardHeader,

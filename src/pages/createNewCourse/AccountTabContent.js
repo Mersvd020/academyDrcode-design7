@@ -1,8 +1,5 @@
-// ** React Imports
 import { Fragment, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
-
-// ** Reactstrap Imports
 import {
   Row,
   Col,
@@ -17,7 +14,6 @@ import {
 } from "reactstrap";
 
 const AccountTabContent = ({ data, onDataChange }) => {
-  // ** Form
   const {
     control,
     watch,
@@ -33,8 +29,6 @@ const AccountTabContent = ({ data, onDataChange }) => {
       EndTime: data?.EndTime || "",
     },
   });
-
-  // Watch all fields and send to parent
   const watchedFields = watch();
 
   useEffect(() => {

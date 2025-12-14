@@ -41,9 +41,10 @@ const CreateNewNews = lazy(()=> import("../../pages/createNewNews"))
 const NewsPreview = lazy(()=> import("../../pages/newsPages/newsPreview"))
 const NewsCatCreate = lazy(()=> import("../../pages/createNewsCat"))
 const NewsCatEdit = lazy(()=> import("../../pages/editNewsCat"));
+
 ///////////////////////////////////////////////////////////
- const Users = lazy(()=> import("../../pages/user/list"));
- const UsersPreview = lazy(()=> import("../../pages/user/view"))
+ const Users = lazy(()=> import("../../pages/user/user/list"));
+ const UsersPreview = lazy(()=> import("../../pages/user/user/view"))
 ///////////////////////////////////////////////////////////
 const CommentPage = lazy(() => import("../../pages/commentPage"));
 ///////////////////////////////////////////////////////////
@@ -51,6 +52,9 @@ const OstadYaranFehrest  = lazy(()=> import("../../pages/OstadYaran/OstadYaranFe
 const OstadYaranEdit = lazy(()=> import("../../pages/OstadYaran/OstadYaranEdit"))
 const OstadYaranCreate = lazy(()=> import("../../pages/OstadYaran/OstadYaranCreate"))
 const AddToCourse = lazy(()=> import("../../pages/OstadYaran/AddToCourse"))
+const EditSocialGroup = lazy(()=> import("../../pages/coursePages/coursePreview/EditSocialGroup"))
+const AddSocialGroup = lazy (()=> import("../../pages/coursePages/coursePreview/AddSocialGroup"))
+import Profile from "../../pages/Profile";
 ///////////////////////////////////////////////////////////
 const DepartmentsCreate = lazy(()=> import("../../pages/Departments/DepartmentsCreate"))
 const DepartmentsEdit = lazy(()=> import("../../pages/Departments/DepartmentsEdit"))
@@ -76,7 +80,7 @@ const Routes = [
   {
     path: "/",
     index: true,
-    element: <Navigate replace to={DefaultRoute} />,
+    element: <Navigate replace to="/login" />,
   },
   {
     path: "/home",
@@ -92,6 +96,14 @@ const Routes = [
   {
     path:"/course/preview/:id",
     element:<CoursePreview/>
+  },
+   {
+    path:"social-group/edit/:id",
+    element:<EditSocialGroup/>
+  },
+   {
+    path:"social-group/add",
+    element:<AddSocialGroup/>
   },
   {
     path:"/course/reserved-list",
@@ -140,6 +152,7 @@ const Routes = [
     path:"/news/preview/:id",
     element:<NewsPreview/>
   },
+  
 
  
 /// comment
@@ -203,7 +216,10 @@ const Routes = [
     path: '/buildings/edit/:id',
     element: <BuildingsEdit />
   },
-
+{
+  path: '/profile',
+  element: <Profile />
+},
 
   
 

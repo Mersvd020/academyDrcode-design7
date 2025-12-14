@@ -1,10 +1,6 @@
-// ** React Imports
 import { Link } from "react-router-dom";
-
-// ** Custom Components
 import Avatar from "@components/avatar";
-
-// ** Third Party Components
+import { useNavigate } from 'react-router-dom';
 import {
   User,
   Mail,
@@ -15,19 +11,21 @@ import {
   HelpCircle,
   Power,
 } from "react-feather";
-
-// ** Reactstrap Imports
+import { useSelector } from 'react-redux';
 import {
   UncontrolledDropdown,
   DropdownMenu,
   DropdownToggle,
   DropdownItem,
 } from "reactstrap";
-
-// ** Default Avatar Image
 import defaultAvatar from "@src/assets/images/portrait/small/avatar-s-11.jpg";
 
 const UserDropdown = () => {
+  const navigate = useNavigate();
+
+ 
+  const profile = useSelector(state => state.profile.profileInfo);
+
   return (
     <UncontrolledDropdown tag="li" className="dropdown-user nav-item">
       <DropdownToggle
@@ -36,19 +34,24 @@ const UserDropdown = () => {
         className="nav-link dropdown-user-link"
         onClick={(e) => e.preventDefault()}
       >
-        <div className="user-nav d-sm-flex d-none">
-          <span className="user-name fw-bold">John Doe</span>
-          <span className="user-status">Admin</span>
+        <div className="user-nav d-flex">
+          <span className="user-name fw-bold">
+            {profile?.fName || '—'} {profile?.lName || ''}
+          </span>
+          <span className="user-status">
+            {profile?.userName || ''}
+          </span>
         </div>
         <Avatar
-          img={defaultAvatar}
+          img={profile?.currentPictureAddress || defaultAvatar}
           imgHeight="40"
           imgWidth="40"
           status="online"
         />
       </DropdownToggle>
+
       <DropdownMenu end>
-        <DropdownItem tag={Link} to="/" onClick={(e) => e.preventDefault()}>
+        <DropdownItem onClick={() => navigate("/Profile")}>
           <User size={14} className="me-75" />
           <span className="align-middle">Profile</span>
         </DropdownItem>

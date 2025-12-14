@@ -20,7 +20,7 @@ import assistanceWork from "../pages/OstadYaran/store/index"
 import CourseAssistance from "../pages/OstadYaran/store/index"
 import departments from "../pages/Departments/store/index"
 import buildings from "../pages/Buildings/store/index";
-
+import profile  from "../pages/Profile/store/index";
 
 
 
@@ -28,8 +28,8 @@ import comment from "../pages/commentPage/store/index"
 
 import authentication from "../pages/authentication/store/index"
 
-import users from "../pages/user/store/index"
-import appUsers from "../pages/user/store/index"
+import users from "../pages/user/user/store/index"
+import appUsers from "../pages/user/user/store/index"
 
 const rootReducer = { 
   navbar, 
@@ -51,6 +51,7 @@ const rootReducer = {
   CourseAssistance,
   departments,
   buildings,
+  profile,
 };
 
 export default rootReducer;

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 
 import UserInfoCard from './UserInfoCard'
 import UserTimeline from './UserTimeline'
-import UserProjectsList from './UserProjectsList'
+import CoursesList from './UserProjectsList'
 import UserRolesManager from './UserRolesManager' 
 
 
@@ -47,7 +47,7 @@ const UserView = () => {
             </Col>
             <Col xl='8' lg='7' md='7'>
               <UserTimeline />
-              <UserProjectsList />
+              <CoursesList user={selectedUser} />
             </Col>
           </Row>
         </div>

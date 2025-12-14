@@ -1,10 +1,6 @@
-// ** Redux Imports
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-
-// ** Axios Imports
 import axios from 'axios'
 
-// ** Login Action
 export const handleLogin = createAsyncThunk(
   'authentication/login',
   async (userData, { rejectWithValue }) => {
@@ -15,11 +11,12 @@ export const handleLogin = createAsyncThunk(
           phoneOrGmail: userData.phoneOrGmail,
           password: userData.password,
           rememberMe: userData.rememberMe || false
+          
         }
       )
 
       const data = response.data
-
+      
       
       if (data.token) {
         localStorage.setItem('token', data.token)
@@ -76,10 +73,10 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // Login Cases
       .addCase(handleLogin.pending, (state) => {
         state.loading = true
         state.error = null
+        
       })
       .addCase(handleLogin.fulfilled, (state, action) => {
         state.loading = false
@@ -92,7 +89,6 @@ const authSlice = createSlice({
         state.error = action.payload
         state.isAuthenticated = false
       })
-      // Logout Cases
       .addCase(handleLogout.fulfilled, (state) => {
         state.userData = null
         state.isAuthenticated = false

@@ -259,7 +259,7 @@ const SocialGroupList = ({ SelectedNews }) => {
       </div>
 
       <div className="p-2">
-        <Button
+        {/* <Button
           color="primary"
           block
           className="d-flex align-items-center justify-content-center"
@@ -272,7 +272,7 @@ const SocialGroupList = ({ SelectedNews }) => {
         >
           <Plus size={20} className="me-2" />
           افزودن گروه
-        </Button>
+        </Button> */}
       </div>
     </Card>
   );

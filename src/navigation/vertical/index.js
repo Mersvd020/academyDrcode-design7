@@ -29,7 +29,7 @@ export default [
         navLink: "/course/list",
       },
        {
-        id: "courseList",
+        id: "courseListU",
         title: "لیست دوره های شما",
         icon: <Circle size={12} />,
         navLink: "/course/myCourse-list",
@@ -41,13 +41,13 @@ export default [
         navLink: "/course/reserved-list",
       },
        {
-        id: "courseList",
+        id: "courseCreate",
         title: "ساخت دوره های جدید",
         icon: <Circle size={12} />,
         navLink: "/course/create-Course",
       },
        {
-        id: "courseList",
+        id: "coursetime",
         title: "لیست زمانبندی",
         icon: <Circle size={12} />,
         navLink: "/course/time-list",
@@ -68,13 +68,13 @@ export default [
         navLink: "/news/list",
       },
        {
-        id: "NewsList",
+        id: "CreateList",
         title: "ایجاد اخبار جدید",
         icon: <Circle size={12} />,
         navLink: "/news/create-News",
       },
        {
-        id: "NewsList",
+        id: "CatList",
         title: "لیست دسته بندی",
         icon: <Circle size={12} />,
         navLink: "/news/catlist",
