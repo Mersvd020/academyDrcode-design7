@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+.courseContent {
+	@apply  bg-[rgba(245,246,248,1)] flex justify-center gap-[15px] ;
+}
+
+.main {
+	@apply  w-[clamp(700px,60%,1200px)] min-h-[1000px];
+}
+
+.main > .set {
+	@apply h-[50px] bg-white rounded-[5px] mb-[10px] flex justify-between items-center gap-5;
+}
+
+.main > .set > .sort {
+	@apply border border-[#ddd] rounded-[5px] p-[3px] leading-[25px] relative text-sm text-[#444] mr-[10px];
+}
+
+.main > .set > .sort:hover > ul {
+	@apply opacity-100 visible;
+}
+
+.main > .set > .sort > ul {
+	@apply absolute top-[35px] left-0 z-[200] bg-white/95 shadow-[0_10px_15px_1px_#ddd] rounded-b-[7px] py-[5px] m-0 list-none text-[13px] text-center w-full invisible transition-all duration-300 opacity-0;
+}
+
+.main > .set > .sort > ul > li > label:hover {
+	@apply bg-[lightseagreen] text-white;
+}
+
+.main > .set > .sort > ul > li > label {
+	@apply h-full rounded-[5px] mx-auto block w-[90%];
+}
+
+.main > .set > .sort > ul > li > input {
+	@apply hidden;
+}
+
+.main > .set > .sort > ul > li > input:checked + label {
+	@apply bg-orange-500 text-white;
+}
+
+.main > .set > .viewBox {
+	@apply flex flex-row gap-[10px] ml-[10px];
+
+}
+
+.main > .set > .viewBox > .view1 {
+	@apply border-0  bg-[#9B0EE1] rounded-[5px] h-[25px]  cursor-pointer shadow-[0_0_10px_#9B0EE140];
+}
+.main > .set > .viewBox > .view2 {
+	@apply  border-0 rounded-[5px] h-[25px] relative cursor-pointer shadow-[0_0_10px_#9B0EE140];
+}
+
+.side {
+	@apply w-[280px] rounded-[5px];
+}
+
+.side > .sideMaket {
+	@apply w-full bg-white rounded-[5px] py-[10px] text-[#555] flex flex-row flex-wrap;
+}
+
+.side > .sideMaket > .filterTitle {
+	@apply w-[90%] font-medium text-xs px-[10px] pb-[15px] border-b border-[#eee] m-[10px] flex justify-between items-center;
+}
+
+.side > .sideMaket > .filterTitle > .filterNum {
+	@apply text-[10px] font-bold;
+}
+
+.side > .sideMaket > .filterTitle > h2 {
+	@apply font-medium text-xs;
+}
+
+.side > .sideMaket > .filter {
+	@apply rounded-[5px] p-[3px] w-[90%];
+}
+
+.side > .sideMaket > .filter > .catLabel {
+	@apply font-medium text-xs indent-[10px] p-[5px];
+}
+
+.side > .sideMaket > .filter > .category {
+	@apply border border-[#ddd] rounded-[5px] p-[3px] leading-[25px] relative text-sm text-[#444] mr-[10px];
+}
+
+.side > .sideMaket > .filter > .category > .catName {
+	@apply flex justify-between;
+}
+
+.catBox {
+	@apply absolute top-[35px] left-0 z-[200] bg-white/95 shadow-[0_10px_15px_1px_#ddd] rounded-b-[7px] py-[5px] m-0 list-none text-[13px] text-center w-full invisible transition-all duration-300 opacity-0;
+}
+
+.catBox.show {
+	@apply opacity-100 visible;
+}
+
+.side > .sideMaket > .filter > .category > ul > li > label:hover {
+	@apply bg-[lightseagreen] text-white;
+}
+
+.side > .sideMaket > .filter > .category > ul > li > label {
+	@apply h-full rounded-[5px] mx-auto block w-[90%];
+}
+
+.side > .sideMaket > .filter > .category > ul > li > input {
+	@apply hidden;
+}
+
+.side > .sideMaket > .filter > .category > ul > li > input:checked + label {
+	@apply bg-orange-500 text-white;
+}
+
+
+.side > .sideMaket > .filterInput > label {
+	@apply text-xs border border-black block;
+}
+
+.rangeInput {
+	@apply block w-[70%] h-[7px] bg-[#1c58a5] my-3 mx-auto appearance-none rounded-sm;
+}
+
+.price-filter {
+	@apply  w-full  p-4 font-bold;
+	/* direction: ltr */
+}
+
+.header {
+	@apply text-[#00897b] font-semibold text-sm;
+}
+
+.price-inputs {
+	@apply flex justify-between w-[260px] mt-1.5 ;
+}
+
+.price-box {
+	@apply flex flex-col;
+}
+
+.label {
+	@apply text-xs text-[#666];
+}
+
+.dropdown {
+	@apply bg-[#f3f3f3] border border-[#d1d1d1] rounded-[10px] min-w-[100px] h-10 p-[3px] text-[13px] flex place-items-center text-center cursor-pointer text-[#333];
+}
+
+.dropdown:hover {
+	@apply bg-[#e8e8e8];
+}
+
+.arrow {
+	@apply text-[10px] mr-1.5 text-[#777];
+}
+.dropdown:hover>.arrow {
+	@apply transform rotate-90;
+}

@@ -1,0 +1,51 @@
+import {useState} from "react"
+
+const Sorting = ({filters,filterBt,setFilters, updateActiveFilters})=>{
+   const[showSort,setShowSort] = useState(false);
+  
+	 const sorts = [
+        {id:1 , name : "جدید ترین"},
+        {id:2 , name : "محبوب ترین"},
+        {id:3 , name : "ارزان ترین"},
+        {id:4 , name : "گران ترین"},
+	 ]
+
+    //    const handleSortChange = (Srtt) => {
+		//  const newSort = filters.sortBy === Srtt ? '' : Srtt;
+    //      setFilters({...filters, sortBy :newSort});
+		//  updateActiveFilters({ ...filters, sortBy: newSort });
+    //   };
+    return(
+        <div className={`sort relative lg:block  bg-[#F5F5F5] rounded-[5px] `}>
+         <div
+           onClick={() => setShowSort(!showSort)}
+           className="border border-gray-300 rounded-lg p-2 text-sm text-gray-700 cursor-pointer flex justify-between items-center hover:bg-gray-50"
+         >
+           <span>{'مرتب سازی بر اساس'}</span>
+           <span className="text-xs">▼</span>
+         </div>
+         
+         {showSort && (
+           <ul className="absolute top-full left-0 w-full mt-1 bg-white shadow-lg rounded-b-lg z-50 border border-gray-200">
+             {sorts.map((Srt) => (
+               <li key={Srt.id}>
+                 <label
+                   className={`block rounded-[5px] px-4 py-2 text-sm cursor-pointer hover:bg-teal-500 hover:text-white
+                    
+                   }`}
+                   onClick={() => {
+                    //  handleSortChange(Srt.name);
+                     setShowSort(false);
+                   }}
+                 >
+                   {Srt.name}
+                 </label>
+               </li>
+             ))}
+           </ul>
+         )}
+         
+       </div>
+    )
+}
+export default Sorting

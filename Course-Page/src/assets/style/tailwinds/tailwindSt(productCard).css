@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+#grid.view1 {
+	@apply flex  flex-row-reverse flex-wrap gap-[10px] justify-center  whitespace-nowrap;
+};
+
+
+#grid.view1 > .productCard {
+	@apply min-w-[30%] max-w-[70%] md:w-[30%] lg:w-[32%] rounded-[48px]  text-[10px] overflow-hidden relative h-[400px] p-[5px] bg-white;
+}
+
+#grid.view1 > .productCard > .Image {
+	@apply w-full rounded-[48px] h-full;
+}
+
+#grid.view1 > .productCard > .favorite {
+	@apply absolute flex  justify-center top-[25px] right-5 w-[30px] h-[30px] rounded-full border border-gray-500;
+}
+
+#grid.view1 > .productCard > .info {
+	@apply absolute rounded-bl-[44px] rounded-br-[44px] w-[97%] h-[200px] text-white top-[200px] whitespace-nowrap font-medium text-[15px] p-[5px] ;
+	/* backdrop-blur-sm */
+}
+
+#grid.view1 > .productCard > .info > .intro {
+	@apply flex justify-between h-[20%];
+}
+
+ #grid.view1 > .productCard > .info > .intro > .name {
+	@apply text-[20px] font-bold;
+}
+
+#grid.view1 > .productCard > .info > .intro > .star {
+	@apply  flex items-center gap-1; 
+}
+
+#grid.view1 > .productCard > .info > .intro > .star > img {
+	@apply  w-full;
+}
+
+ #grid.view1 > .productCard > .info > .teacherInfo {
+	@apply flex flex-wrap border-b border-gray-500 h-[40%];
+}
+ #grid.view1 > .productCard > .info > .teacherInfo > span {
+	@apply  flex items-center gap-1;
+ }
+ #grid.view1 > .productCard > .info > .teacherInfo >.teacher {
+	@apply  w-[60%];
+ }
+ #grid.view1 > .productCard > .info > .teacherInfo >.student {
+	@apply  w-[40%];
+ }
+
+ #grid.view1 > .productCard > .info > .teacherInfo > div {
+	@apply flex items-center gap-1;
+ }
+
+/* #grid.view1 > .productCard > .info > .teacherInfo > span {
+	@apply w-[49%]  flex items-center gap-1;
+}
+
+ #grid.view1 > .productCard > .info > .teacherInfo > div {
+	@apply  flex items-center ;
+} */
+
+#grid.view1 > .productCard > .info > .detail {
+	@apply flex flex-row justify-evenly items-center h-[30%];
+}
+
+#grid.view1 > .productCard > .info > .detail > span {
+	@apply  flex flex-row gap-3 place-items-center h-[40px] items-center;
+}
+
+ #grid.view1 > .productCard > .info > .detail > .detailBt {
+	@apply rounded-[20px] p-[5px] hover:bg-[white] hover:text-black transition border border-2 ;
+}
+
+
+ #grid.view2 {
+	@apply flex flex-col flex-wrap gap-[10px] whitespace-nowrap;
+}
+
+ #grid.view2 > .productCard {
+	@apply w-full bg-white rounded-[48px] h-[216px] overflow-hidden relative flex flex-row justify-start place-items-center;
+}
+
+ #grid.view2 > .productCard > .Image {
+	@apply  w-[35%] h-[95%] p-[5px] rounded-[44px] shadow-[0_0_50px_1px_#eee];
+}
+
+ #grid.view2 > .productCard > .info {
+	@apply  w-[62%] h-[95%] p-[10px];
+}
+
+ #grid.view2 > .productCard > .favorite {
+	@apply absolute flex  justify-center top-[25px] right-5 w-[30px] h-[30px] rounded-full border border-gray-500;
+}
+
+ #grid.view2 > .productCard > .info > .intro {
+	@apply flex justify-start h-[20%] ;
+}
+
+ #grid.view2 > .productCard > .info > .intro > .name {
+	@apply text-[20px]  font-bold;
+}
+
+ #grid.view2 > .productCard > .info > .intro > .star {
+	@apply  gap-1 flex text-white items-center absolute top-[25px] right-[20%] md:right-[28%];
+}
+
+ #grid.view2 > .productCard > .info > .intro > .star > img {
+	@apply  w-full;
+}
+
+ #grid.view2 > .productCard > .info > .teacherInfo {
+	@apply flex flex-wrap md:w-1/2 w-[full] h-[40%];
+}
+
+#grid.view2 > .productCard > .info > .teacherInfo > span {
+	@apply  flex items-center gap-1;
+ }
+ #grid.view2 > .productCard > .info > .teacherInfo >.teacher {
+	@apply  w-[60%];
+ }
+ #grid.view2 > .productCard > .info > .teacherInfo >.student {
+	@apply  w-[40%];
+ }
+
+ #grid.view2 > .productCard > .info > .teacherInfo > div {
+	@apply flex items-center gap-1;
+ }
+ 
+ /* #grid.view2 > .productCard > .info > .teacherInfo > span {
+	@apply  w-[50%]  flex items-center gap-1;
+}
+
+ #grid.view2 > .productCard > .info > .teacherInfo > div {
+	@apply flex items-center gap-1;
+} */
+
+ #grid.view2 > .productCard > .info > .detail {
+	@apply flex flex-row justify-between gap-5 items-center h-[30%];
+}
+
+ #grid.view2 > .productCard > .info > .detail > span {
+	@apply  flex flex-row gap-2 place-items-center  h-[40px] p-[5px];
+}
+
+ #grid.view2 > .productCard > .info > .detail > .detailBt {
+	@apply rounded-[20px] p-[5px] text-[11px] md:text-[15px] hover:bg-[black] hover:text-white transition border border-2;
+}
+
+
+ #grid.view3 {
+	@apply flex flex-row flex-wrap gap-3 whitespace-nowrap  ;
+}
+
+ #grid.view3 > .productCard {
+	@apply w-full bg-white rounded-[40px] h-[156px] relative flex flex-row justify-start place-items-center;
+}
+
+ #grid.view3 > .productCard > .Image {
+	@apply  w-[35%] h-[95%] p-[5px] rounded-[40px] shadow-[0_0_50px_1px_#eee];
+}
+
+ #grid.view3 > .productCard > .info {
+	@apply  w-[65%] text-[10px];
+}
+
+ #grid.view3 > .productCard > .favorite {
+	@apply absolute flex  justify-center hidden top-[25px] right-5 w-[30px] h-[30px] rounded-full border border-gray-500;
+}
+
+ #grid.view3 > .productCard > .info > .intro {
+	@apply flex justify-start h-[20%] pb-2  ;
+}
+
+ #grid.view3 > .productCard > .info > .intro > .name {
+	@apply text-[20px]  font-bold;
+}
+
+ #grid.view3 > .productCard > .info > .intro > .star {
+	@apply  gap-1 flex text-white hidden items-center absolute top-[25px] right-[20%] lg:right-[22%];
+}
+
+ #grid.view3 > .productCard > .info > .intro > .star > img {
+	@apply  w-full;
+}
+
+ #grid.view3 > .productCard > .info > .teacherInfo {
+	@apply flex flex-wrap  h-[40%] ;
+}
+
+ #grid.view3 > .productCard > .info > .teacherInfo > span {
+	@apply  flex items-center gap-1;
+ }
+ #grid.view3 > .productCard > .info > .teacherInfo >.teacher {
+	@apply  w-[60%];
+ }
+ #grid.view3 > .productCard > .info > .teacherInfo >.student {
+	@apply  w-[40%];
+ }
+
+ #grid.view3 > .productCard > .info > .teacherInfo > div {
+	@apply flex items-center gap-1;
+}
+#grid.view3 > .productCard > .info > .teacherInfo > .date {
+	@apply hidden;
+}
+
+ #grid.view3 > .productCard > .info > .detail {
+	@apply flex flex-col justify-between items-center h-[30%];
+}
+
+ #grid.view3 > .productCard > .info > .detail > span {
+	@apply  flex flex-row justify-start w-full gap-2 text-[15px]  p-[5px];
+}
+
+ #grid.view3 > .productCard > .info > .detail > .detailBt {
+	@apply rounded-[20px] w-[95%] p-2 text-[11px] hover:bg-[black] hover:text-white text-[#9B0EE1] md:text-[15px] border border-2;
+}
+

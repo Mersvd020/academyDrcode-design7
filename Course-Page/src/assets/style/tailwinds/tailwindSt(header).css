@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.courseHeader {
+    @apply h-[280px] flex flex-col place-items-center bg-gray-100 ;
+}
+
+.courseHeader >.header{
+    @apply w-[1210px] h-[50px] border border-blue-500 mt-3;
+}
+
+.courseHeader >.searchBox{
+    @apply w-[550px] h-[180px]  mt-8 relative;
+}
+
+.courseHeader >.searchBox >.searchTitle{
+    @apply w-[50%] m-auto  text-center font-semibold;
+}
+.courseHeader >.searchBox >.searchTitle >p{
+    @apply flex  flex-row justify-around items-center text-[13px] text-gray-600 mb-2;
+}
+
+.courseHeader >.searchBox >.searchTitle >h1{
+    @apply text-[20px];
+}
+.courseHeader >.searchBox >.search{
+    @apply w-[80%]  h-[45px] m-auto mt-4 flex flex-row justify-between rounded-[3px] ;
+}
+.courseHeader >.searchBox >.search >.searchBt{
+    @apply w-[12%] h-[45px] bg-[#3C8B85] rounded-e-[5px] z-[3];
+}
+.courseHeader >.searchBox >.search >.searchInput{
+    @apply w-[87.5%] h-[45px] pr-1 border-3 rounded-s-[5px]  border-[#3C8B85] border-e-0 ;
+}
